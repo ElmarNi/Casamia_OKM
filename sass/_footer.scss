@@ -1,0 +1,92 @@
+footer{
+    .bottom{
+        padding: 30px 0;
+        background: #f8f8f8;
+        .menu{
+            ul{
+                li{
+                    a{
+                        display: inline-block;
+                        padding: 5px 15px;
+                    }
+                }
+            }
+        }
+        .social-icons{
+            ul{
+                li{
+                    a{
+                        width: 36px;
+                        height: 36px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: black;
+                        color: white;
+                        transition: all .3s ease;
+                        border: 1px solid black;
+                        border-radius: 4px;
+                        &:hover{
+                            background-color: white;
+                            color: black;
+                        }
+                        i{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .top{
+        padding: 60px 0;
+        border-bottom: 1px solid #cccccc61;
+        h1{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        p{
+            margin: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            a, span{
+                font-weight: normal;
+            }
+        }
+        .first-adr{
+            margin-right: 100px;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 120%;
+                background-color: #cccccc61;
+                top: -10%;
+                right: -50px;
+            }
+        }
+    }
+}
+@media (min-width: 1200px){
+    footer .menu ul{
+        margin-left: 30px;
+    }
+}
+@media(max-width:768px){
+    footer .first-adr, footer .last-adr{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    footer .first-adr{
+        margin-right: 0 !important;
+        margin-bottom: 40px;
+    }
+    footer .top .first-adr::before{
+        height: 1px;
+        width: 100%;
+        left: 0;
+        bottom: -20px;
+        top: unset;
+    }
+}

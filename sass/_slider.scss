@@ -1,0 +1,84 @@
+#slider{
+    margin-top: 181px;
+    position: relative;
+    .item{
+        height: 580px;
+        position: relative;
+        .content{
+            background-color: rgba(255, 255, 255, 0.84);
+            position: absolute;
+            z-index: 2;
+            top: 100px;
+            right: 80px;
+            display: block;
+            width: 530px;
+            padding: 50px;
+            h1{
+                font-size: 50px;
+                color: #343434;
+                margin: 0;
+            }
+            p{
+                width: 100%;
+                padding: 10px 0 30px 0;
+                margin: 0;
+                color: #343434;
+                font-size: 17px;
+            }
+            a{
+                transition: all .3s ease;
+                i{
+                    margin-left: 20px;
+                    transform: translateY(1px);
+                    transition: all .3s ease;
+                    font-size: 18px;
+                }
+                &:hover{
+                    font-weight: bold;
+                    i{
+                        transform: translateY(1px) translateX(8px);
+                    }
+                }
+            }
+        }
+    }
+    .owl-nav{
+        button{
+            position: absolute;
+            top: 50%;
+            z-index: 4;
+            color: white;
+            font-size: 85px;
+            height: 100%;
+            transform: translateY(-50%);
+            width: 100px;
+            outline: none;
+        }
+        .owl-prev{
+            left: 0px;
+        }
+        .owl-next{
+            right: 0px;
+        }
+    }
+    .owl-dots{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        button{
+            width: 8px;
+            height: 8px;
+            margin-right: 10px;
+            background-color: #ffc155;
+            border-radius: 100%;
+            opacity: .4;
+            outline: none;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        button.active{
+            opacity: 1;
+        }
+    }
+}
