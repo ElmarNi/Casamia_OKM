@@ -332,6 +332,41 @@ a:hover {
 #slider .item .content a:hover i {
   transform: translateY(1px) translateX(8px);
 }
+#slider .owl-nav button:first-child::before, #slider .owl-nav button:last-child::before {
+  position: absolute;
+  content: '';
+  background-color: white;
+  opacity: 0;
+  top: 51%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 125px;
+  transition: all .3s ease;
+}
+#slider .owl-nav button:first-child:hover::before, #slider .owl-nav button:last-child:hover::before {
+  opacity: .5;
+}
+#slider .owl-nav button:first-child {
+  left: -30px;
+}
+#slider .owl-nav button:first-child::before {
+  border-bottom-right-radius: 250px;
+  border-top-right-radius: 250px;
+  right: 12px;
+  border-left-color: transparent;
+}
+#slider .owl-nav button:last-child {
+  right: -30px;
+}
+#slider .owl-nav button:last-child::before {
+  border-bottom-left-radius: 250px;
+  border-top-left-radius: 250px;
+  left: 12px;
+  border-right-color: transparent;
+}
+#slider .owl-carousel .owl-loaded .owl-drag {
+  overflow: hidden;
+}
 
 #categories {
   padding: 60px 0;
@@ -633,5 +668,9 @@ footer .top .first-adr::before {
     left: 0;
     bottom: -20px;
     top: unset;
+  }
+
+  footer {
+    margin-bottom: 56px;
   }
 }
