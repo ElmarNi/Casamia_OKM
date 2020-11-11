@@ -38,6 +38,8 @@
                 border: 1px solid transparent;
                 border-bottom-right-radius: 5px;
                 transition: all .1s ease;
+                background-color: white;
+                z-index: 2;
                 li{
                     a{
                         display: inline-block;
@@ -121,21 +123,25 @@
             height: 55px;
             justify-content: space-around;
             transition: all .5s ease;
+            a{
+                transition: all .1s ease;
+                display: inline-block;
+                height: 100%;
+            }
             a.active{
                 color: rgb(110, 110, 110);
-                transition: all .3s ease;
             }
             .submenu-li{
                 position: relative;
                 i{
                     font-size: 13px;
                     margin-left: 3px;
-                    transition: all .3s ease;
+                    transition: all .1s ease;
                 }
                 .submenu{
                     position: absolute;
                     background-color: white;
-                    width: 740px;
+                    width: 850px;
                     display: flex;
                     flex-wrap: wrap;
                     top: 55px;
@@ -145,9 +151,23 @@
                     border-top: none;
                     border-bottom-left-radius: 6px;
                     border-bottom-right-radius: 6px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .2s ease;
+                    .second, .third, .fourth{
+                        margin-left: 50px;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 20px;
+                            bottom: 60px;
+                            left: -25px;
+                            width: 1px;
+                            background-color: #ccc;
+                        }   
+                    }
                     li{
-                        flex-basis: 23.6%;
-                        width: 50%;
                         a{
                             font-size: 12px;
                             transition: all .1s ease;
@@ -162,6 +182,12 @@
                         }
                     }
                 }
+                &:hover{
+                    .submenu{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
             }
         }
     }
@@ -174,4 +200,26 @@
 }
 #large-screens.active .bottom .menu .submenu-li .submenu{
     top: 40px;
+}
+@media (max-width: 991px){
+    #large-screens .bottom .menu .submenu-li .submenu{
+        width: 540px;
+        .first, .second, .third, .fourth{
+            flex-basis: 50%;
+            margin: 0;
+            &::before{
+                left: -15px;
+                bottom: 20px;
+            }
+        }
+        .third{
+            &::before{
+                content: unset;
+            }
+        }
+        .second, .fourth{
+            margin-left: 20px;
+            flex-basis: 45%;
+        }
+    }
 }

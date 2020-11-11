@@ -1,0 +1,28 @@
+#brands{
+    background-color: #f8f8f8;
+    padding: 30px 0;
+    .owl-nav .owl-prev{
+        left: -100px;
+    }
+    .owl-nav .owl-next{
+        right: -100px;
+    }
+    .owl-nav button{
+        color: black !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        width: 80%;
+        border-radius: 6px;
+    }
+    .item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    span{
+        margin-bottom: 13px;
+    }
+}

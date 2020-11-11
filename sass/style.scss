@@ -23,9 +23,11 @@ a{
       max-width: 1300px;
   }
 }
+@import 'common';
 @import 'header';
 @import 'slider';
 @import 'categories';
 @import 'about';
 @import 'services';
+@import 'brands';
 @import 'footer';
