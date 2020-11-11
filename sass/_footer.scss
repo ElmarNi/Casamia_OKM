@@ -66,13 +66,12 @@ footer{
                 right: -50px;
             }
         }
+        .first-adr, .last-adr{
+            text-align: center;
+        }
     }
 }
-@media (min-width: 1200px){
-    footer .menu ul{
-        margin-left: 30px;
-    }
-}
+
 @media(max-width:768px){
     footer .first-adr, footer .last-adr{
         flex-basis: 100%;

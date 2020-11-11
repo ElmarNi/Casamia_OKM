@@ -17,7 +17,7 @@
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             border-bottom: 0;
-            width: 60px;
+            width: 52px;
             transition: all .1s ease;
             a{
                 font-size: 14px;
@@ -40,6 +40,9 @@
                 transition: all .1s ease;
                 background-color: white;
                 z-index: 2;
+                border-color: #ccc;
+                opacity: 0;
+                visibility: hidden;
                 li{
                     a{
                         display: inline-block;
@@ -52,9 +55,18 @@
                    
                 }
             }
+            &:hover{
+                border-color: #ccc;
+                ul{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                i{
+                    transform: translateY(-1px) rotate(180deg);
+                }
+            }
         }
         .location{
-            margin-left: 25px;
             a{
                 position: relative;
                 img{
@@ -81,32 +93,20 @@
                 }
             }
         }
-        .languages.active{
-            border-color: #ccc;
-            ul{
-                border-color: #ccc;
-            }
-            i{
-                transform: translateY(-1px) rotate(180deg);
-            }
-        }
         .social-icons{
             ul{
                 li{
                     a{
-                        width: 36px;
-                        height: 36px;
+                        width: 30px;
+                        height: 30px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        border: 1px solid;
-                        border-radius: 4px;
-                        color: black;
+                        color: #222222;
                         transition: all .2s ease;
-                        background-color: white;
-                        border: 1px solid black;
+                        background-color: #f8f8f8;
                         i{
-                            font-size: 18px;
+                            font-size: 14px;
                         }
                         &:hover{
                             border-color: white;

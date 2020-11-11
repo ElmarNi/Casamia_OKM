@@ -1,6 +1,9 @@
 #services{
     padding: 60px 0;
     padding-top: 0;
+    .box{
+        padding: 0 10px;
+    }
     .item{
         position: relative;
         .image-wrapper{

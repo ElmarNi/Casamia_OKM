@@ -7,12 +7,6 @@ $(document).ready(function () {
       }
     });
   };
-  $("#large-screens .languages a").click(function (e) {
-    e.preventDefault();
-    $("#large-screens .languages ul").show()
-    $("#large-screens .languages.active ul").hide()
-    $(this).parent().toggleClass("active")
-  })
 
   $("#about .play-video").click(function (e) {
     e.preventDefault();

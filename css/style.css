@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 ul {
@@ -98,7 +98,7 @@ a:hover {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom: 0;
-  width: 60px;
+  width: 52px;
   transition: all .1s ease;
 }
 #large-screens .top .languages a {
@@ -122,6 +122,9 @@ a:hover {
   transition: all .1s ease;
   background-color: white;
   z-index: 2;
+  border-color: #ccc;
+  opacity: 0;
+  visibility: hidden;
 }
 #large-screens .top .languages ul li a {
   display: inline-block;
@@ -131,8 +134,15 @@ a:hover {
 #large-screens .top .languages ul li a:hover {
   font-weight: bold;
 }
-#large-screens .top .location {
-  margin-left: 25px;
+#large-screens .top .languages:hover {
+  border-color: #ccc;
+}
+#large-screens .top .languages:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+#large-screens .top .languages:hover i {
+  transform: translateY(-1px) rotate(180deg);
 }
 #large-screens .top .location a {
   position: relative;
@@ -157,30 +167,18 @@ a:hover {
   opacity: 1;
   visibility: visible;
 }
-#large-screens .top .languages.active {
-  border-color: #ccc;
-}
-#large-screens .top .languages.active ul {
-  border-color: #ccc;
-}
-#large-screens .top .languages.active i {
-  transform: translateY(-1px) rotate(180deg);
-}
 #large-screens .top .social-icons ul li a {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid;
-  border-radius: 4px;
-  color: black;
+  color: #222222;
   transition: all .2s ease;
-  background-color: white;
-  border: 1px solid black;
+  background-color: #f8f8f8;
 }
 #large-screens .top .social-icons ul li a i {
-  font-size: 18px;
+  font-size: 14px;
 }
 #large-screens .top .social-icons ul li a:hover {
   border-color: white;
@@ -291,6 +289,9 @@ a:hover {
   margin-top: 181px;
   position: relative;
 }
+#slider .col-12 {
+  padding: 0 10px;
+}
 #slider .item {
   height: 580px;
   position: relative;
@@ -384,7 +385,7 @@ a:hover {
   width: 100%;
   object-fit: cover;
   transition: all .5s ease;
-  opacity: .6;
+  opacity: .9;
 }
 #categories .content {
   font-weight: 500;
@@ -524,6 +525,9 @@ a:hover {
   padding: 60px 0;
   padding-top: 0;
 }
+#services .box {
+  padding: 0 10px;
+}
 #services .item {
   position: relative;
 }
@@ -645,12 +649,10 @@ footer .top .first-adr::before {
   top: -10%;
   right: -50px;
 }
-
-@media (min-width: 1200px) {
-  footer .menu ul {
-    margin-left: 30px;
-  }
+footer .top .first-adr, footer .top .last-adr {
+  text-align: center;
 }
+
 @media (max-width: 768px) {
   footer .first-adr, footer .last-adr {
     flex-basis: 100%;

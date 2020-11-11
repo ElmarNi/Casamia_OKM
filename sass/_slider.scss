@@ -1,6 +1,9 @@
 #slider{
     margin-top: 181px;
     position: relative;
+    .col-12{
+        padding: 0 10px;
+    }
     .item{
         height: 580px;
         position: relative;
