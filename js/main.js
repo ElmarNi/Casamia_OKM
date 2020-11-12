@@ -35,15 +35,15 @@ $(document).ready(function () {
     responsiveClass:true,
     responsive:{
         0:{
-            items:2,
-            nav:true
-        },
-        768:{
             items:3,
             nav:true
         },
-        1000:{
+        768:{
             items:5,
+            nav:true
+        },
+        1000:{
+            items:8,
             nav:true
         }
     }
@@ -58,10 +58,29 @@ $(document).ready(function () {
   });
   $("#large-screens .menu-a").hover(
     function() {
-      $("#large-screens .menu-a").addClass( "active" );
+      $("#large-screens .menu-a").parent().addClass( "active" );
+      $(this).parent().removeClass( "active" );
+    }, function() {
+      $( "#large-screens a" ).parent().removeClass( "active" );
+      $(this).removeClass("hovered")
+    }
+  );
+  $("#large-screens .submenu").hover(
+    function() {
+      $("#large-screens .menu-a").parent().addClass( "active" );
+      $(this).parent().removeClass( "active" );
+      $(this).parent().find("a").addClass("hovered")
+    }, function() {
+      $( "#large-screens a" ).parent().removeClass( "active" );
+      $(this).parent().find("a").removeClass("hovered")
+    }
+  );
+  $("footer .menu a").hover(
+    function() {
+      $("footer .menu a").addClass( "active" );
       $(this).removeClass( "active" );
     }, function() {
-      $( "#large-screens a" ).removeClass( "active" );
+      $("footer .menu a").removeClass( "active" );
     }
   );
 });
