@@ -1,6 +1,7 @@
 #slider{
     margin-top: 181px;
     position: relative;
+    overflow: hidden;
     .col-12{
         padding: 0 10px;
     }
@@ -87,5 +88,32 @@
     }
     .owl-carousel .owl-loaded .owl-drag{
         overflow: hidden;
+    }
+}
+@media (max-width: 768px){
+    #slider .container {
+        max-width: unset;
+        width: 100%;
+        .col-12{
+            padding: 0;
+            .item{
+                height: 500px;
+                .content{
+                    position: absolute;
+                    left: 50px;
+                    right: 50px;
+                    width: auto;
+                    padding: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    p{
+                        font-size: 14px;
+                    }
+                    h1{
+                        font-size: 27px;
+                    }
+                }
+            }
+        }
     }
 }

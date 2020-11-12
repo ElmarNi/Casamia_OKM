@@ -2,6 +2,9 @@ footer{
     .bottom{
         padding: 51px 0;
         background: #f8f8f8;
+        img{
+            opacity: .7;
+        }
         .menu{
             ul{
                 li{
@@ -50,6 +53,7 @@ footer{
             margin: 0;
             margin-bottom: 5px;
             font-weight: bold;
+            font-size: 13px;
             a, span{
                 font-weight: normal;
             }
@@ -98,5 +102,10 @@ footer{
     }
     footer{
         margin-bottom: 56px;
+    }
+}
+@media (min-width: 1200px){
+    footer .container {
+        max-width: 1400px;
     }
 }

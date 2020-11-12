@@ -315,6 +315,13 @@ a:hover {
   display: inline-block !important;
 }
 
+#small-screens {
+  padding: 10px 0;
+}
+#small-screens .location img {
+  width: 25px;
+}
+
 @media (max-width: 1200px) {
   #large-screens .bottom .menu li {
     padding: 0px 20px;
@@ -347,6 +354,7 @@ a:hover {
 #slider {
   margin-top: 181px;
   position: relative;
+  overflow: hidden;
 }
 #slider .col-12 {
   padding: 0 10px;
@@ -428,6 +436,33 @@ a:hover {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  #slider .container {
+    max-width: unset;
+    width: 100%;
+  }
+  #slider .container .col-12 {
+    padding: 0;
+  }
+  #slider .container .col-12 .item {
+    height: 500px;
+  }
+  #slider .container .col-12 .item .content {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    width: auto;
+    padding: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #slider .container .col-12 .item .content p {
+    font-size: 14px;
+  }
+  #slider .container .col-12 .item .content h1 {
+    font-size: 27px;
+  }
+}
 #categories {
   padding: 60px 0;
   padding-bottom: 0;
@@ -445,7 +480,7 @@ a:hover {
   object-fit: cover;
   transition: all .5s ease;
   opacity: .9;
-  height: 390px;
+  height: 354px;
 }
 #categories .content {
   font-weight: 500;
@@ -475,9 +510,12 @@ a:hover {
   transform: scale(1.2, 1.2);
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (max-width: 767.98px) {
   #categories .content {
     left: 0px;
+  }
+  #categories .content h2 {
+    font-size: 20px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -496,15 +534,12 @@ a:hover {
 }
 #about .bg-image {
   position: absolute;
-  height: 280px;
+  height: 285px;
   width: 53vw;
   top: 50%;
   left: 0px;
   z-index: -1;
   transform: translateY(-50%);
-}
-#about .content {
-  margin-left: 180px;
 }
 #about .content h1 {
   font-size: 30px;
@@ -516,7 +551,7 @@ a:hover {
   position: absolute;
   content: '';
   width: 1px;
-  height: 120px;
+  height: 110px;
   background-color: #ab8523;
   bottom: 7px;
   left: -20px;
@@ -525,6 +560,17 @@ a:hover {
 #about .content p {
   padding: 5px 0 30px;
   margin: 0;
+}
+#about .content a {
+  padding: 10px 30px 10px 15px;
+  border: 1px solid black;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+#about .content a i {
+  margin-left: 10px;
+  font-size: 13px;
 }
 #about .video {
   position: relative;
@@ -561,11 +607,11 @@ a:hover {
   #about .content {
     max-width: 400px;
     margin-left: 40px;
-    margin-top: 60px;
+    margin-top: 50px;
   }
 
   #about .bg-image {
-    height: 70%;
+    height: calc(100% - 180px);
     width: 100%;
     top: 180px;
     transform: translateY(0%);
@@ -573,20 +619,17 @@ a:hover {
 }
 @media (max-width: 768px) {
   #about .bg-image {
-    height: 65%;
+    height: calc(100% - 180px);
   }
 }
 @media (max-width: 576px) {
   #about .bg-image {
-    height: 60%;
+    height: calc(100% - 180px);
   }
 }
 #services {
   padding: 60px 0;
   padding-top: 0;
-}
-#services .box {
-  padding: 0 10px;
 }
 #services .item {
   position: relative;
@@ -624,9 +667,20 @@ a:hover {
   opacity: .9;
 }
 
+@media (max-width: 991px) {
+  #services {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .box {
+    padding: 0 10px;
+  }
+}
 #brands {
   background-color: #f8f8f8;
   padding: 30px 0;
+  overflow: hidden;
 }
 #brands .owl-nav .owl-prev {
   left: -100px;
@@ -656,6 +710,9 @@ a:hover {
 footer .bottom {
   padding: 51px 0;
   background: #f8f8f8;
+}
+footer .bottom img {
+  opacity: .7;
 }
 footer .bottom .menu ul li a {
   display: inline-block;
@@ -693,6 +750,7 @@ footer .top p {
   margin: 0;
   margin-bottom: 5px;
   font-weight: bold;
+  font-size: 13px;
 }
 footer .top p a, footer .top p span {
   font-weight: normal;
@@ -742,5 +800,10 @@ footer .copy {
 
   footer {
     margin-bottom: 56px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .container {
+    max-width: 1400px;
   }
 }
