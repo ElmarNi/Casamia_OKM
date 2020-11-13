@@ -45,6 +45,10 @@ a:hover {
   right: 0px;
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 .owl-dots {
   display: flex;
   justify-content: center;
@@ -316,10 +320,97 @@ a:hover {
 }
 
 #small-screens {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 99;
+}
+#small-screens .top {
   padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 #small-screens .location img {
   width: 25px;
+}
+#small-screens nav {
+  overflow: auto;
+  height: 100vh;
+  position: absolute;
+  z-index: 9;
+  background: white;
+  width: 100vw;
+  left: -101%;
+  transition: all .3s ease;
+}
+#small-screens nav ul.menu {
+  padding: 0 15px;
+}
+#small-screens nav ul.menu li a {
+  display: inline-block;
+  padding: 17px 25px 17px 25px;
+  padding-left: 0;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+}
+#small-screens nav ul.menu li .open-sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#small-screens nav .lang {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+#small-screens nav .lang ul {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 3px 7px;
+  border-radius: 5px;
+  width: 100px;
+  justify-content: space-around;
+  background: white;
+}
+#small-screens nav .lang, #small-screens nav .marker {
+  background: #f8f8f8;
+  padding: 17px 15px;
+  position: relative;
+}
+#small-screens nav ul.menu a::after, #small-screens nav .marker::after {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 50%;
+  height: 1px;
+  content: '';
+  background-image: -webkit-linear-gradient(right, #ccc 20%, rgba(255, 255, 255, 0) 0);
+  background-image: linear-gradient(to left, #ccc 20%, rgba(255, 255, 255, 0) 0);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 5px 1px;
+}
+#small-screens nav .marker img {
+  width: 25px;
+  margin-right: 12px;
+}
+#small-screens nav .marker a {
+  margin-left: -4px;
+}
+#small-screens nav .submenu {
+  padding-left: 20px;
+}
+#small-screens nav .submenu a {
+  font-size: 14px !important;
+}
+#small-screens nav .open-sub i {
+  transition: all .2s ease;
+}
+#small-screens nav .open-sub i.active {
+  transform: rotate(90deg);
+}
+#small-screens nav.active {
+  left: 0;
 }
 
 @media (max-width: 1200px) {
@@ -461,6 +552,10 @@ a:hover {
   }
   #slider .container .col-12 .item .content h1 {
     font-size: 27px;
+  }
+
+  #slider {
+    margin-top: 75px;
   }
 }
 #categories {

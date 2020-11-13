@@ -83,4 +83,22 @@ $(document).ready(function () {
       $("footer .menu a").removeClass( "active" );
     }
   );
+  $("#small-screens .open-menu").click(function (e) {
+    e.preventDefault();
+    $("#small-screens nav").toggleClass("active")
+    $(this).find(".close-img").toggleClass("d-none")
+    $(this).find(".open-img").toggleClass("d-none")
+  })
+  $("#small-screens a.open-sub").click(function (e) {
+    e.preventDefault()
+    $(this).next().slideToggle("fast")
+    $(this).find("i").toggleClass("active")
+    $("body").addClass("hidden")
+    $("body").toggleClass("hidden")
+  })
+  $("#small-screens a.open-sub").clickOutside(function () {
+    $("#small-screens .submenu").slideUp("fast")
+    $(this).find("i").removeClass("active")
+    $("body").removeClass("hidden")
+  })
 });

@@ -17,6 +17,9 @@
         right: 0px;
     }
 }
+body.hidden{
+    overflow: hidden;
+}
 .owl-dots{
     display: flex;
     justify-content: center;
